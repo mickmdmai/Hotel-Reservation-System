@@ -1,0 +1,3244 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 ArialMT;\f2\froman\fcharset0 TimesNewRomanPSMT;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww25400\viewh13700\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl380
+
+\f1\fs32 \cf0 \expnd0\expndtw0\kerning0
+###Table Creation & Population Statements###
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\b\fs40 \cf0 \expnd0\expndtw0\kerning0
+CREATE TABLE
+\b0 \expnd0\expndtw0\kerning0
+ CUSTOMER (
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Username 		VARCHAR (30) 	
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs40 \expnd0\expndtw0\kerning0
+	
+\b0 \expnd0\expndtw0\kerning0
+Password		VARCHAR(30)	
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	First_Name		VARCHAR (30) 	
+\b \expnd0\expndtw0\kerning0
+NOT NULL
+\b0 \expnd0\expndtw0\kerning0
+,
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Last_Name		VARCHAR (30)	
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Email			VARCHAR (30) 	
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl540\sa284
+
+\f2\fs32 \cf0 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+PRIMARY KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Username),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+UNIQUE
+\b0 \expnd0\expndtw0\kerning0
+ (Email)) ENGINE = InnoDB;
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+I
+\b \expnd0\expndtw0\kerning0
+NSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ CUSTOMER
+\fs32 \expnd0\expndtw0\kerning0
+ 
+\fs42 \expnd0\expndtw0\kerning0
+(Username, Password, First_Name, Last_Name, Email)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs42 \expnd0\expndtw0\kerning0
+VALUES
+\b0 \expnd0\expndtw0\kerning0
+ 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User1', 'Password1', 'First1', 'Last1', 'user1@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User2', 'Password2', 'First2', 'Last2', 'user25@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User3', 'Password3', 'First3', 'Last3 ', 'user26@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User4', 'Password4', 'First4 ', 'Last4 ', 'user27@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User5', 'Password5', 'First5 ', 'Last5 ', 'user28@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User6', 'Password6', 'First6 ', 'Last6 ', 'user29@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User7', 'Password7 ', 'First7 ', 'Last7 ', 'user30@gatech.edu\'92),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User8', 'Password8 ', 'First8', 'Last8 ', 'user8@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User9', 'Password9 ', 'First9 ', 'Last9 ', 'user9@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User10', 'Password10 ', 'First10 ', 'Last10', 'user10@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User11', 'Password11 ', 'First11 ', 'Last11 ', 'user11@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User12 ', 'Password12 ', 'First12 ', 'Last12', 'user12@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User13 ', 'Password13 ', 'First13 ', 'Last13 ', 'user13@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User14 ', 'Password14 ', 'First14 ', 'Last14\'92, 'user14@gatech.edu '),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User15 ', 'Password15 ', 'First15 ', 'Last15 ', 'user15@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User16 ', 'Password16 ', 'First16 ', 'Last16 ', 'user16@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User17 ', 'Password17 ', 'First17 ', 'Last17 ', 'user17@gatech.edu\'92),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User18', 'Password18 ', 'First18', 'Last18\'92, 'user18@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User19 ', 'Password19 ', 'First19 ', 'Last19 ', 'user19@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User20 ', 'Password20 ', 'First20 ', 'Last20', 'user20@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User21', 'Password21 ', 'First21 ', 'Last21 ', 'user21@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User22 ', 'Password22 ', 'First22 ', 'Last22', 'user22@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User23 ', 'Password23 ', 'First23 ', 'Last23 ', 'user23@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User24 ', 'Password24 ', 'First24 ', 'Last24\'92, 'user24@gatech.edu '),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User25', 'Password25', 'First25', 'Last25', 'user25@gatech.edu'), \'a0\'a0\'a0//customers from 25 to 30 without payment information
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User26', 'Password26', 'First26', 'Last26', 'user26@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User27', 'Password27', 'First27', 'Last27', 'user27@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User28', 'Password28', 'First28', 'Last28', 'user28@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User29', 'Password29', 'First29', 'Last29', 'user29@gatech.edu'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('User30', 'Password30', 'First30', 'Last30', 'user30@gatech.edu');
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\b\fs40 \cf0 \expnd0\expndtw0\kerning0
+CREATE TABLE
+\b0 \expnd0\expndtw0\kerning0
+ MANAGEMENT (
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Mgm_Username 		VARCHAR (30) 	
+\b \expnd0\expndtw0\kerning0
+NOT NULL
+\b0 \expnd0\expndtw0\kerning0
+,
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Password 			VARCHAR(30) 	
+\b \expnd0\expndtw0\kerning0
+NOT NULL
+\b0 \expnd0\expndtw0\kerning0
+,
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl800
+
+\f2\b\fs42 \cf0 \expnd0\expndtw0\kerning0
+	PRIMARY KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Mgm_Username)) ENGINE = InnoDB;
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+I
+\b \expnd0\expndtw0\kerning0
+NSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ MANAGEMENT
+\fs32 \expnd0\expndtw0\kerning0
+ 
+\fs42 \expnd0\expndtw0\kerning0
+(Mgm_Username, Password)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs42 \expnd0\expndtw0\kerning0
+VALUES
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('Manageruser1', 'Managerpass1'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('Manageruser2', 'Managerpass2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('Manageruser3', 'Managerpass3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('Manageruser4', 'Managerpass4'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+('Manageruser5', 'Managerpass5');
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\b\fs40 \cf0 \expnd0\expndtw0\kerning0
+CREATE TABLE
+\b0 \expnd0\expndtw0\kerning0
+ ROOM (
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Room_Num		INT				
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Location			VARCHAR (30)		
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Fixed_Cost			DECIMAL(19, 2)	
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Room_Category		VARCHAR (30)		
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Cost_Extra_Bed		DECIMAL (19, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Number_Of_People	INT				
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl540\sa284
+
+\f2\fs32 \cf0 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+PRIMARY KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Room_Num, Location)) ENGINE = InnoDB;
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+I
+\b \expnd0\expndtw0\kerning0
+NSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ ROOM (Room_Num, Location, Fixed_Cost, Room_Category, Cost_Extra_Bed, Number_Of_People)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs42 \expnd0\expndtw0\kerning0
+VALUES
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(101, 'Atlanta', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Atlanta', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Atlanta', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Atlanta', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Atlanta', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Atlanta', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Atlanta', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Atlanta', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Charlotte', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Charlotte', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Charlotte', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Charlotte', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Charlotte', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Charlotte', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Charlotte', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Charlotte', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Savannah', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Savannah', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Savannah', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Savannah', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Savannah', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Savannah', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Savannah', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Savannah', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Orlando', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Orlando', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Orlando', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Orlando', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Orlando', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Orlando', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Orlando', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Orlando', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Miami', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Miami', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Miami', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Miami', 100, 'Standard', 70, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Miami', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Miami', 170, 'Family', 50, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Miami', 250, 'Suite', 150, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Miami', 250, 'Suite', 150, 4)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(201, 'Atlanta', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(201, 'Charlotte', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(201, 'Miami', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(201, 'Orlando', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(201, 'Savannah', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(202, 'Atlanta', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(202, 'Charlotte', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(202, 'Miami', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(202, 'Orlando', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(202, 'Savannah', 100.00, 'Standard', 70.00, 2),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(204, 'Atlanta', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(204, 'Charlotte', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(204, 'Miami', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(204, 'Orlando', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(204, 'Savannah', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(209, 'Atlanta', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(209, 'Charlotte', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(209, 'Miami', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(209, 'Orlando', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(209, 'Savannah', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(205, 'Atlanta', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(205, 'Charlotte', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(205, 'Miami', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(205, 'Orlando', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(205, 'Savannah', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(206, 'Atlanta', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(206, 'Charlotte', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(206, 'Miami', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(206, 'Orlando', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(206, 'Savannah', 170.00, 'Family', 50.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(207, 'Atlanta', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(207, 'Charlotte', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(207, 'Miami', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(207, 'Orlando', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(207, 'Savannah', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(208, 'Atlanta', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(208, 'Charlotte', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(208, 'Miami', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(208, 'Orlando', 250.00, 'Suite', 150.00, 4),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(208, 'Savannah', 250.00, 'Suite', 150.00, 4);
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\b\fs40 \cf0 \expnd0\expndtw0\kerning0
+CREATE TABLE
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION (
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Rsv_ID			CHAR(6)			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Check_In_Date		DATE			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl540\sa284
+
+\f2\fs32 \cf0 \expnd0\expndtw0\kerning0
+	
+\fs40 \expnd0\expndtw0\kerning0
+Check_Out_Date		DATE			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\fs40 \expnd0\expndtw0\kerning0
+Total_Cost			DECIMAL(19, 2)	
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\fs40 \expnd0\expndtw0\kerning0
+Cancel_Flag		BOOLEAN	
+\b \expnd0\expndtw0\kerning0
+		DEFAULT 0,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\fs40 \cf0 \expnd0\expndtw0\kerning0
+	Cust_Username		VARCHAR (30)
+\b \expnd0\expndtw0\kerning0
+,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl540\sa284
+
+\f2\fs32 \cf0 \expnd0\expndtw0\kerning0
+	
+\fs40 \expnd0\expndtw0\kerning0
+CC_Num			CHAR(16)
+\b \expnd0\expndtw0\kerning0
+,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+PRIMARY KEY 
+\b0 \expnd0\expndtw0\kerning0
+(Rsv_ID),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\fs40 \cf0 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+FOREIGN KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Cust_Username) 
+\b \expnd0\expndtw0\kerning0
+REFERENCES
+\b0 \expnd0\expndtw0\kerning0
+ CUSTOMER (Username)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+ON DELETE
+\b0 \expnd0\expndtw0\kerning0
+ SET NULL 
+\b \expnd0\expndtw0\kerning0
+ON UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ CASCADE,
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+FOREIGN KEY
+\b0 \expnd0\expndtw0\kerning0
+ (CC_Num) 
+\b \expnd0\expndtw0\kerning0
+REFERENCES
+\b0 \expnd0\expndtw0\kerning0
+ CREDIT_CARD
+\b \expnd0\expndtw0\kerning0
+ 
+\b0 \expnd0\expndtw0\kerning0
+(CC_Num)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+ON DELETE 
+\b0 \expnd0\expndtw0\kerning0
+SET NULL 
+\b \expnd0\expndtw0\kerning0
+ON UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ CASCADE) ENGINE = InnoDB;
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+I
+\b \expnd0\expndtw0\kerning0
+NSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION (Rsv_ID, Check_In_Date, Check_Out_Date, Total_Cost, Cancel_Flag, Cust_Username, CC_Num)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs42 \expnd0\expndtw0\kerning0
+VALUES
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(100000, '2015-12-01', '2015-12-02', 70, 0, 'User1', 1000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(200000, '2015-12-01', '2015-12-02', 70, 0, 'User2', 2000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(300000, '2015-12-02', '2015-12-03', 70, 0, 'User3', 3000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(400000, '2015-12-02', '2015-12-03', 70, 0, 'User4', 4000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(500000, '2015-12-03', '2015-12-05', 340, 0, 'User5', 5000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(600000, '2015-12-03', '2015-12-05', 340, 0, 'User6', 6000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(700000, '2015-12-04', '2015-12-06', 500, 0, 'User7', 7000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(800000, '2015-12-04', '2015-12-06', 500, 0, 'User8', 8000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(900000, '2015-12-01', '2015-12-02', 70, 0, 'User5', 5000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(110000, '2015-12-01', '2015-12-02', 70, 0, 'User6', 6000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(111000, '2015-12-02', '2015-12-03', 70, 0, 'User7', 7000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(112000, '2015-12-02', '2015-12-03', 70, 0, 'User8', 8000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(113000, '2015-12-03', '2015-12-05', 340, 0, 'User1', 1000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(114000, '2015-12-03', '2015-12-05', 340, 0, 'User2', 2000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(115000, '2015-12-04', '2015-12-06', 500, 0, 'User3', 3000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(116000, '2015-12-04', '2015-12-06', 500, 0, 'User4', 4000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(117000, '2015-12-01', '2015-12-02', 70, 0, 'User9', 9000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(118000, '2015-12-01', '2015-12-02', 70, 0, 'User10', 11000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(119000, '2015-12-02', '2015-12-03', 70, 0, 'User11', 1110000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(120000, '2015-12-02', '2015-12-03', 70, 0, 'User12', 1120000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(121000, '2015-12-03', '2015-12-05', 340, 0, 'User13', 1130000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(122000, '2015-12-03', '2015-12-05', 340, 0, 'User14', 1140000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(123000, '2015-12-04', '2015-12-06', 500, 0, 'User15', 1150000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(124000, '2015-12-04', '2015-12-06', 500, 0, 'User16', 1160000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(125000, '2015-12-01', '2015-12-02', 70, 0, 'User13', 1130000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(126000, '2015-12-01', '2015-12-02', 70, 0, 'User14', 11400000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(127000, '2015-12-02', '2015-12-03', 70, 0, 'User15', 1150000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(128000, '2015-12-02', '2015-12-03', 70, 0, 'User16', 1160000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(129000, '2015-12-03', '2015-12-05', 340, 0, 'User9', 9000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(130000, '2015-12-03', '2015-12-05', 340, 0, 'User10', 1100000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(131000, '2015-12-04', '2015-12-06', 500, 0, 'User11', 1110000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(132000, '2015-12-04', '2015-12-06', 500, 0, 'User12', 1120000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(133000, '2015-12-01', '2015-12-02', 70, 0, 'User17', 1170000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(134000, '2015-12-01', '2015-12-02', 70, 0, 'User18', 11800000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(135000, '2015-12-02', '2015-12-03', 70, 0, 'User19', 1190000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(136000, '2015-12-02', '2015-12-03', 70, 0, 'User20', 1200000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(137000, '2015-12-03', '2015-12-05', 340, 0, 'User21', 1210000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(138000, '2015-12-03', '2015-12-05', 340, 0, 'User22', 1220000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(139000, '2015-12-04', '2015-12-06', 500, 0, 'User23', 1230000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(140000, '2015-12-04', '2015-12-06', 500, 0, 'User24', 1240000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(141000, '2015-12-04', '2015-12-06', 500, 1, 'User11', 1110000000000000), \'a0//cancel reservations
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(142000, '2015-12-04', '2015-12-06', 500, 1, 'User12', 1120000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(143000, '2015-12-01', '2015-12-02', 70, 1, 'User17', 1170000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(144000, '2015-12-01', '2015-12-02', 70, 1, 'User18', 11800000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(145000, '2015-12-02', '2015-12-03', 70, 1, 'User19', 1190000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(146000, '2015-12-02', '2015-12-03', 70, 1, 'User20', 1200000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(147000, '2015-12-03', '2015-12-05', 340, 1, 'User21', 1210000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(148000, '2015-12-03', '2015-12-05', 340, 1, 'User22', 1220000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(149000, '2015-12-04', '2015-12-06', 500, 1, 'User23', 1230000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(150000, '2015-12-04', '2015-12-06', 500, 1, 'User24', 1240000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(151000, '2015-08-01', '2015-08-03', 70, 0, 'User1', 1000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(152000, '2015-08-01', '2015-08-03', 70, 0, 'User2', 2000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(153000, '2015-08-01', '2015-08-03', 70, 0, 'User3', 3000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(154000, '2015-08-01', '2015-08-03', 70, 0, 'User4', 4000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(155000, '2015-08-01', '2015-08-03', 340, 0, 'User5', 5000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(156000, '2015-08-08', '2015-08-10', 340, 0, 'User6', 6000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(157000, '2015-08-08', '2015-08-10', 500, 0, 'User7', 7000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(158000, '2015-08-08', '2015-08-10', 500, 0, 'User8', 8000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(159000, '2015-08-08', '2015-08-10', 70, 0, 'User5', 5000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(160000, '2015-08-08', '2015-08-10', 70, 0, 'User6', 6000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(161000, '2015-09-16', '2015-09-18', 70, 0, 'User7', 7000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(162000, '2015-09-16', '2015-09-18', 70, 0, 'User8', 8000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(163000, '2015-09-16', '2015-09-18', 340, 0, 'User1', 1000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(164000, '2015-09-16', '2015-09-18', 340, 0, 'User2', 2000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(165000, '2015-09-16', '2015-09-18', 500, 0, 'User3', 3000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(166000, '2015-09-22', '2015-09-24', 500, 0, 'User4', 4000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(167000, '2015-09-22', '2015-09-24', 70, 0, 'User9', 9000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(168000, '2015-09-22', '2015-09-24', 70, 0, 'User10', 11000000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(169000, '2015-09-22', '2015-09-24', 70, 0, 'User11', 1110000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(170000, '2015-09-22', '2015-09-24', 70, 0, 'User12', 1120000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(171000, '2015-10-25', '2015-10-27', 340, 0, 'User13', 1130000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(172000, '2015-10-25', '2015-10-27', 340, 0, 'User14', 1140000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(173000, '2015-10-25', '2015-10-27', 500, 0, 'User15', 1150000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(174000, '2015-10-25', '2015-10-27', 500, 0, 'User16', 1160000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(175000, '2015-10-25', '2015-10-27', 70, 0, 'User13', 1130000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(176000, '2015-10-28', '2015-10-29', 70, 0, 'User14', 11400000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(177000, '2015-10-28', '2015-10-29', 70, 0, 'User15', 1150000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(178000, '2015-10-28', '2015-10-29', 70, 0, 'User16', 1160000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(179000, '2015-10-28', '2015-10-29', 340, 0, 'User9', 9000000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(180000, '2015-10-28', '2015-10-29', 340, 0, 'User10', 1100000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(181000, '2015-11-11', '2015-11-13', 500, 0, 'User11', 1110000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(182000, '2015-11-11', '2015-11-13', 500, 0, 'User12', 1120000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(183000, '2015-11-11', '2015-11-13', 70, 0, 'User17', 1170000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(184000, '2015-11-11', '2015-11-13', 70, 0, 'User18', 11800000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(185000, '2015-11-11', '2015-11-13', 70, 0, 'User19', 1190000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(186000, '2015-11-19', '2015-11-21', 70, 0, 'User20', 1200000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(187000, '2015-11-19', '2015-11-21', 340, 0, 'User21', 1210000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(188000, '2015-11-19', '2015-11-21', 340, 0, 'User22', 1220000000000000),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(189000, '2015-11-19', '2015-11-21', 500, 0, 'User23', 1230000000000000), 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(190000, '2015-11-19', '2015-11-21', 500, 0, 'User24', 1240000000000000),\
+\
+(191000, '2016-01-12', '2016-01-15', 70, 0, 'User1', 1000000000000000),\
+(192000, '2016-01-12', '2016-01-15', 70, 0, 'User2', 2000000000000000),\
+(193000, '2016-01-12', '2016-01-15', 70, 0, 'User3', 3000000000000000),\
+(194000, '2016-01-12', '2016-01-15', 70, 0, 'User4', 4000000000000000),\
+\
+(195000, '2016-01-12', '2016-01-15', 340, 0, 'User5', 5000000000000000), \
+(196000, '2016-01-25', '2016-01-28', 340, 0, 'User6', 6000000000000000),\
+\
+(197000, '2016-01-25', '2016-01-28', 500, 0, 'User7', 7000000000000000), \
+(198000, '2016-01-25', '2016-01-28', 500, 0, 'User8', 8000000000000000),\
+\
+(199000, '2016-01-25', '2016-01-28', 70, 0, 'User5', 5000000000000000),\
+(210000, '2016-01-25', '2016-01-28', 70, 0, 'User6', 6000000000000000);\
+\pard\pardeftab720
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\b\fs40 \cf0 \expnd0\expndtw0\kerning0
+CREATE TABLE
+\b0 \expnd0\expndtw0\kerning0
+ CREDIT_CARD ( 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	CC_Num			CHAR(16) 			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Exp_Date			DATE			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	CCV_NUM		CHAR(3)			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs40 \expnd0\expndtw0\kerning0
+	
+\b0 \expnd0\expndtw0\kerning0
+Cust_First_Name		VARCHAR (30)		
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Cust_Last_Name
+\b \expnd0\expndtw0\kerning0
+		
+\b0 \expnd0\expndtw0\kerning0
+VARCHAR (30)		
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs40 \expnd0\expndtw0\kerning0
+	
+\b0 \expnd0\expndtw0\kerning0
+Cust_Username		VARCHAR (30)	
+\b \expnd0\expndtw0\kerning0
+,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+PRIMARY KEY 
+\b0 \expnd0\expndtw0\kerning0
+(CC_Num),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+FOREIGN KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Cust_Username) 
+\b \expnd0\expndtw0\kerning0
+REFERENCES
+\b0 \expnd0\expndtw0\kerning0
+ CUSTOMER (Username)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+ON DELETE
+\b0 \expnd0\expndtw0\kerning0
+ SET NULL 
+\b \expnd0\expndtw0\kerning0
+ON UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ CASCADE) ENGINE = InnoDB;
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+I
+\b \expnd0\expndtw0\kerning0
+NSERT INTO 
+\b0 \expnd0\expndtw0\kerning0
+CREDIT_CARD (CC_Num, Exp_Date, CCV_NUM, Cust_First_Name, Cust_Last_Name, Cust_Username)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs42 \expnd0\expndtw0\kerning0
+VALUES
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1000000000000000, '2018-1-1', 111, 'First1\'92, 'Last1\'92, 'User1\'92),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(2000000000000000, '2018-2-2', 222, 'First2', 'Last2', 'User2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(3000000000000000, '2018-3-3', 333, 'First3', 'Last3', 'User3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(4000000000000000, '2018-4-4', 444, 'First4', 'Last4', 'User4'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(5000000000000000, '2018-5-5', 555, 'First5', 'Last5', 'User5'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(6000000000000000, '2018-6-6', 666, 'First6', 'Last6', 'User6'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(7000000000000000, '2018-7-7', 777, 'First7', 'Last7', 'User7'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(8000000000000000, '2018-8-8', 888, 'First8', 'Last8', 'User8'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(9000000000000000, '2018-9-9', 999, 'First9', 'Last9', 'User9'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1100000000000000, '2018-10-10', 010, 'First10', 'Last10', 'User10'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1110000000000000, '2018-11-11', 011, 'First11', 'Last11', 'User11'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1120000000000000, '2018-12-12', 012, 'First12', 'Last12', 'User12'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1130000000000000, '2018-1-13', 013, 'First13', 'Last13', 'User13'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1140000000000000, '2018-2-14', 014, 'First14', 'Last14', 'User14'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1150000000000000, '2018-3-15', 015, 'First15', 'Last15', 'User15'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1160000000000000, '2018-4-16', 016, 'First16', 'Last16', 'User16'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1170000000000000, '2018-5-17', 017, 'First17', 'Last17', 'User17'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1180000000000000, '2018-6-18', 018, 'First18', 'Last18', 'User18'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1190000000000000, '2018-7-19', 019, 'First19', 'Last19', 'User19'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1200000000000000, '2018-8-20', 020, 'First20', 'Last20', 'User20'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1210000000000000, '2018-9-21', 021, 'First21', 'Last21', 'User21'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1220000000000000, '2018-10-22', 022, 'First22', 'Last22', 'User22'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1230000000000000, '2018-11-23', 023, 'First23', 'Last23', 'User23'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1240000000000000, '2018-12-24', 024, 'First24', 'Last24', 'User24 '),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1000000000000001, '2018-1-1', 111, 'First1', 'Last1', 'User1'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(2000000000000002, '2018-2-2', 222, 'First2', 'Last2', 'User2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(3000000000000003, '2018-3-3', 333, 'First3', 'Last3', 'User3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(4000000000000004, '2018-4-4', 444, 'First4', 'Last4', 'User4'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(5000000000000005, '2018-5-5', 555, 'First5', 'Last5', 'User5'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(6000000000000006, '2018-6-6', 666, 'First6', 'Last6', 'User6'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(7000000000000007, '2018-7-7', 777, 'First7', 'Last7', 'User7'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(8000000000000008, '2018-8-8', 888, 'First8', 'Last8', 'User8'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(9000000000000009, '2018-9-9', 999, 'First9', 'Last9', 'User9'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(1000000000000010, '2018-10-10', 010, 'First10', 'Last10', 'User10');
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\b\fs40 \cf0 \expnd0\expndtw0\kerning0
+CREATE TABLE
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES ( 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Room_Num		INT				
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Location			VARCHAR (30)		
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Rsv_ID			CHAR (6)			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs40 \expnd0\expndtw0\kerning0
+	
+\b0 \expnd0\expndtw0\kerning0
+Extra_Bed			BOOLEAN			
+\b \expnd0\expndtw0\kerning0
+DEFAULT 0,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl540\sa284
+
+\f2\fs32 \cf0 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+PRIMARY KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Room_Num, Location, Rsv_ID),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+FOREIGN KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Room_Num, Location) 
+\b \expnd0\expndtw0\kerning0
+REFERENCES
+\b0 \expnd0\expndtw0\kerning0
+ ROOM (Room_Num, Location)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+ON DELETE 
+\b0 \expnd0\expndtw0\kerning0
+CASCADE 
+\b \expnd0\expndtw0\kerning0
+ON UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ CASCADE, 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+INDEX
+\b0 \expnd0\expndtw0\kerning0
+ (Room_Num, Location),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+FOREIGN KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Rsv_ID) 
+\b \expnd0\expndtw0\kerning0
+REFERENCES
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION (Rsv_ID)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\fs40 \cf0 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+ON DELETE
+\b0 \expnd0\expndtw0\kerning0
+ CASCADE 
+\b \expnd0\expndtw0\kerning0
+ON UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ CASCADE) ENGINE = InnoDB;
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\b\fs42 \cf0 \expnd0\expndtw0\kerning0
+INSERT INTO 
+\b0 \expnd0\expndtw0\kerning0
+RESERVES (Room_Num, Location, Rsv_ID, Extra_Bed)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs42 \expnd0\expndtw0\kerning0
+VALUES
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(101, 'Atlanta', 100000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Atlanta', 200000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Atlanta', 300000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Atlanta', 400000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Atlanta', 500000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Atlanta', 600000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Atlanta', 700000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Atlanta', 800000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Savannah', 900000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Savannah', 110000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Savannah', 111000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Savannah', 112000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Savannah', 113000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Savannah', 114000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Savannah', 115000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Savannah', 116000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Charlotte', 117000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Charlotte', 118000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Charlotte', 119000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Charlotte', 120000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Charlotte', 121000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Charlotte', 122000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Charlotte', 123000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Charlotte', 124000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Orlando', 125000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Orlando', 126000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Orlando', 127000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Orlando', 128000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Orlando', 129000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Orlando', 130000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'orlando', 131000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Orlando', 132000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Miami', 133000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Miami', 134000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Miami', 135000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Miami', 136000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Miami', 137000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Miami', 138000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Miami', 139000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Miami', 140000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(207, 'Atlanta', 141000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(208, 'Charlotte', 142000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(201, 'Atlanta', 143000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(202, 'Charlotte', 144000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(201, 'Miami', 145000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(202, 'Orlando', 146000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(205, 'Savannah', 147000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(206, 'Orlando', 148000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(208, 'Savannah', 149000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(209, 'Miami', 150000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(101, 'Atlanta', 151000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Charlotte', 152000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Miami', 153000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Orlando', 154000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Savannah', 155000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(106, 'Atlanta', 156000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Charlotte', 157000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Miami', 158000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(101, 'Orlando', 159000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Savannah', 160000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(103, 'Atlanta', 161000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Charlotte', 162000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Miami', 163000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Orlando', 164000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Savannah', 165000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(108, 'Atlanta', 166000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(101, 'Charlotte', 167000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Miami', 168000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Orlando', 169000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Savannah', 170000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(105, 'Atlanta', 171000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Charlotte', 172000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Miami', 173000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Orlando', 174000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(101, 'Savannah', 175000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(102, 'Atlanta', 176000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Charlotte', 177000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Miami', 178000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Orlando', 179000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Savannah', 180000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(107, 'Atlanta', 181000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Charlotte', 182000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(101, 'Miami', 183000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Orlando', 184000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Savannah', 185000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(104, 'Atlanta', 186000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Charlotte', 187000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(106, 'Miami', 188000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Orlando', 189000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Savannah', 190000, 0),\
+\
+(101, 'Atlanta', 191000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Charlotte', 192000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(103, 'Miami', 193000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(104, 'Orlando', 194000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(105, 'Savannah', 195000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(106, 'Atlanta', 196000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(107, 'Charlotte', 197000, 1),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(108, 'Miami', 198000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(101, 'Orlando', 199000, 0),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(102, 'Savannah', 210000, 0);
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\b\fs40 \cf0 \expnd0\expndtw0\kerning0
+CREATE TABLE
+\b0 \expnd0\expndtw0\kerning0
+ REVIEW (
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Review_Num		CHAR(6)			
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Rating			VARCHAR(15)		
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl540\sa284
+
+\f2\fs32 \cf0 \expnd0\expndtw0\kerning0
+	
+\fs40 \expnd0\expndtw0\kerning0
+Comment			VARCHAR(100)	
+\b \expnd0\expndtw0\kerning0
+,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\fs40 \cf0 \expnd0\expndtw0\kerning0
+	Location			VARCHAR (30)		
+\b \expnd0\expndtw0\kerning0
+NOT NULL,
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs40 \expnd0\expndtw0\kerning0
+	Cust_Username		VARCHAR (30)	
+\b \expnd0\expndtw0\kerning0
+,
+\b0 \expnd0\expndtw0\kerning0
+	
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl540\sa284
+
+\f2\fs32 \cf0 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+PRIMARY KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Review_Num),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs32 \expnd0\expndtw0\kerning0
+	
+\b\fs40 \expnd0\expndtw0\kerning0
+FOREIGN KEY
+\b0 \expnd0\expndtw0\kerning0
+ (Cust_Username) 
+\b \expnd0\expndtw0\kerning0
+REFERENCES
+\b0 \expnd0\expndtw0\kerning0
+ CUSTOMER (Username)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl680\sa284
+
+\f2\fs40 \cf0 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+ON DELETE
+\b0 \expnd0\expndtw0\kerning0
+ SET NULL 
+\b \expnd0\expndtw0\kerning0
+ON UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ CASCADE) ENGINE = InnoDB;
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\b\fs42 \cf0 \expnd0\expndtw0\kerning0
+INSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ REVIEW (Review_Num, Rating, Comment, Location, Cust_Username)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\b\fs42 \expnd0\expndtw0\kerning0
+VALUES
+\f0\b0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(100000, 'Excellent', 'Like staying there!', 'Atlanta', 'User1'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(200000, 'Good', 'Nice place to stay there!', 'Atlanta', 'User2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(300000, 'Bad', 'Not happy with my stay!', 'Atlanta', 'User3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(400000, 'Very Bad', 'Horrible place to stay!', 'Atlanta', 'User4'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(500000, 'Neutral', 'It was all right!', 'Atlanta', 'User5'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(600000, 'Excellent', 'Like staying there!', 'Atlanta', 'User6'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(700000, 'Good', 'Nice place to stay there!', 'Atlanta', 'User7'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(800000, 'Bad', 'Not happy with my stay!', 'Atlanta', 'User8'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(900000, 'Very Bad', 'Horrible place to stay!', 'Atlanta', 'User9'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(100001, 'Neutral', 'It was all right!', 'Atlanta', 'User10'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(110000, 'Excellent', 'Like staying there!', 'Atlanta', 'User11'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(120000, 'Good', 'Nice place to stay there!', 'Atlanta', 'User12'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(130000, 'Bad', 'Not happy with my stay!', 'Atlanta', 'User13'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(140000, 'Very Bad', 'Horrible place to stay!', 'Atlanta', 'User14'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(150000, 'Neutral', 'It was all right!', 'Atlanta', 'User15'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(160000, 'Excellent', 'Like staying there!', 'Atlanta', 'User16'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(170000, 'Good', 'Nice place to stay there!', 'Atlanta', 'User17'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(180000, 'Bad', 'Not happy with my stay!', 'Atlanta', 'User18'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(190000, 'Very Bad', 'Horrible place to stay!', 'Atlanta', 'User19'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(200001, 'Neutral', 'It was all right!', 'Atlanta', 'User20'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(210000, 'Excellent', 'Like staying there!', 'Charlotte', 'User21'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(220000, 'Good', 'Nice place to stay there!', 'Charlotte', 'User22'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(230000, 'Bad', 'Not happy with my stay!', 'Charlotte', 'User23'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(240000, 'Very Bad', 'Horrible place to stay!', 'Charlotte', 'User24'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(250000, 'Neutral', 'It was all right!', 'Charlotte', 'User1'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(260000, 'Excellent', 'Like staying there!', 'Charlotte', 'User2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(270000, 'Good', 'Nice place to stay there!', 'Charlotte', 'User3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(280000, 'Bad', 'Not happy with my stay!', 'Charlotte', 'User4'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(290000, 'Very Bad', 'Horrible place to stay!', 'Charlotte', 'User5'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(300001, 'Neutral', 'It was all right!', 'Charlotte', 'User6'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(310000, 'Excellent', 'Like staying there!', 'Charlotte', 'User7'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(320000, 'Good', 'Nice place to stay there!', 'Charlotte', 'User8'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(330000, 'Bad', 'Not happy with my stay!', 'Charlotte', 'User9'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(340000, 'Very Bad', 'Horrible place to stay!', 'Charlotte', 'User10'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(350000, 'Neutral', 'It was all right!', 'Charlotte', 'User11'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(360000, 'Excellent', 'Like staying there!', 'Charlotte', 'User12'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(370000, 'Good', 'Nice place to stay there!', 'Charlotte', 'User13'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(380000, 'Bad', 'Not happy with my stay!', 'Charlotte', 'User14'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(390000, 'Very Bad', 'Horrible place to stay!', 'Charlotte', 'User15'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(400001, 'Neutral', 'It was all right!', 'Charlotte', 'User16'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(410000, 'Excellent', 'Like staying there!', 'Savannah', 'User17'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(420000, 'Good', 'Nice place to stay there!', 'Savannah', 'User18'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(430000, 'Bad', 'Not happy with my stay!', 'Savannah', 'User19'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(440000, 'Very Bad', 'Horrible place to stay!', 'Savannah', 'User20'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(450000, 'Neutral', 'It was all right!', 'Savannah', 'User21'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(460000, 'Excellent', 'Like staying there!', 'Savannah', 'User22'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(470000, 'Good', 'Nice place to stay there!', 'Savannah', 'User23'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(480000, 'Bad', 'Not happy with my stay!', 'Savannah', 'User24'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(490000, 'Very Bad', 'Horrible place to stay!', 'Savannah', 'User1'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(500001, 'Neutral', 'It was all right!', 'Savannah', 'User2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(510000, 'Excellent', 'Like staying there!', 'Savannah', 'User3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(520000, 'Good', 'Nice place to stay there!', 'Savannah', 'User4'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(530000, 'Bad', 'Not happy with my stay!', 'Savannah', 'User5'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(540000, 'Very Bad', 'Horrible place to stay!', 'Savannah', 'User6'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(550000, 'Neutral', 'It was all right!', 'Savannah', 'User7'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(560000, 'Excellent', 'Like staying there!', 'Savannah', 'User8'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(570000, 'Good', 'Nice place to stay there!', 'Savannah', 'User9'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(580000, 'Bad', 'Not happy with my stay!', 'Savannah', 'User10'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(590000, 'Very Bad', 'Horrible place to stay!', 'Savannah', 'User11'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(600001, 'Neutral', 'It was all right!', 'Savannah', 'User12'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(610000, 'Excellent', 'Like staying there!', 'Orlando', 'User13'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(620000, 'Good', 'Nice place to stay there!', 'Orlando', 'User14'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(630000, 'Bad', 'Not happy with my stay!', 'Orlando', 'User15'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(640000, 'Very Bad', 'Horrible place to stay!', 'Orlando', 'User16'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(650000, 'Neutral', 'It was all right!', 'Orlando', 'User17'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(660000, 'Excellent', 'Like staying there!', 'Orlando', 'User18'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(670000, 'Good', 'Nice place to stay there!', 'Orlando', 'User19'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(680000, 'Bad', 'Not happy with my stay!', 'Orlando', 'User20'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(690000, 'Very Bad', 'Horrible place to stay!', 'Orlando', 'User21'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(700001, 'Neutral', 'It was all right!', 'Orlando', 'User22'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(710000, 'Excellent', 'Like staying there!', 'Orlando', 'User23'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(720000, 'Good', 'Nice place to stay there!', 'Orlando', 'User24'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(730000, 'Bad', 'Not happy with my stay!', 'Orlando', 'User1'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(740000, 'Very Bad', 'Horrible place to stay!', 'Orlando', 'User2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(750000, 'Neutral', 'It was all right!', 'Orlando', 'User3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(760000, 'Excellent', 'Like staying there!', 'Orlando', 'User4'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(770000, 'Good', 'Nice place to stay there!', 'Orlando', 'User5'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(780000, 'Bad', 'Not happy with my stay!', 'Orlando', 'User6'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(790000, 'Very Bad', 'Horrible place to stay!', 'Orlando', 'User7'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(800001, 'Neutral', 'It was all right!', 'Orlando', 'User8'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(810000, 'Excellent', 'Like staying there!', 'Miami', 'User9'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(820000, 'Good', 'Nice place to stay there!', 'Miami', 'User10'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(830000, 'Bad', 'Not happy with my stay!', 'Miami', 'User11'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(840000, 'Very Bad', 'Horrible place to stay!', 'Miami', 'User12'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(850000, 'Neutral', 'It was all right!', 'Miami', 'User13'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(860000, 'Excellent', 'Like staying there!', 'Miami', 'User14'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(870000, 'Good', 'Nice place to stay there!', 'Miami', 'User15'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(880000, 'Bad', 'Not happy with my stay!', 'Miami', 'User16'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(890000, 'Very Bad', 'Horrible place to stay!', 'Miami', 'User17'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(900001, 'Neutral', 'It was all right!', 'Miami', 'User18'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(910000, 'Excellent', 'Like staying there!', 'Miami', 'User19'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(920000, 'Good', 'Nice place to stay there!', 'Miami', 'User20'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(930000, 'Bad', 'Not happy with my stay!', 'Miami', 'User21'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(940000, 'Very Bad', 'Horrible place to stay!', 'Miami', 'User22'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(950000, 'Neutral', 'It was all right!', 'Miami', 'User23'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\sl500
+
+\f2\fs42 \cf0 \expnd0\expndtw0\kerning0
+(960000, 'Excellent', 'Like staying there!', 'Miami', 'User24'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(970000, 'Good', 'Nice place to stay there!', 'Miami', 'User1'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(980000, 'Bad', 'Not happy with my stay!', 'Miami', 'User2'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(990000, 'Very Bad', 'Horrible place to stay!', 'Miami', 'User3'),
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+
+\f2\fs42 \expnd0\expndtw0\kerning0
+(110001, 'Neutral', 'It was all right!', 'Miami', 'User4');
+\f0\fs24 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720
+\cf0 \expnd0\expndtw0\kerning0
+\
+\
+}

@@ -1,0 +1,932 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPSMT;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+CS 4400
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+Fall 2015
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+Group Number 57
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+Phase III
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+SQL Statements for each task
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+#Task1: Customer Login
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Assume $dbuser and $dbpass are the values used to login
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Username, Password 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ CUSTOMER
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE 
+\b0 \expnd0\expndtw0\kerning0
+Username = 'User1' AND Password = 'Password1';
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+#Task2: Manager login
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Mgm_Username, Password
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ MANAGEMENT
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Mgm_Username = 'dbuser' AND Password = 'dbpass';
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+#Task3: Register/Create Account
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Assume $Newdbuser $Newdbpass $dbfirstN $dblastN $dbemail.
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+I
+\b \expnd0\expndtw0\kerning0
+NSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ CUSTOMER
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+(Username, Password, First_Name, Last_Name, Email)
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+VALUES
+\b0 \expnd0\expndtw0\kerning0
+ 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+('Newdbuser', 'Newdbpass', 'dbfirstN', 'dblastN', 'Newdbemail')
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Task4: Search Rooms
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Assume $dblocation $dbstartDate $dbendDate
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ * 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ ROOM
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Location = 'Atlanta'
+\b \expnd0\expndtw0\kerning0
+ AND
+\b0 \expnd0\expndtw0\kerning0
+ (Room_Num, Location) 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+NOT IN
+\b0 \expnd0\expndtw0\kerning0
+ (
+\b \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Room_Num, Location
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES 
+\b \expnd0\expndtw0\kerning0
+NATURAL JOIN 
+\b0 \expnd0\expndtw0\kerning0
+RESERVATION 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE 
+\b0 \expnd0\expndtw0\kerning0
+Cancel_Flag = 0 
+\b \expnd0\expndtw0\kerning0
+AND
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+((Check_In_DATE <\'92dbendDate\'92) AND  (Check_Out_DATE >\'92dbstartDate\'92)));
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\
+\
+\
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Task5: Add Credit Card
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+# Assume $dbFname, $dbLname, $dbuser $dbcc_Num,$expDate, $dbCCV
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+INSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ CREDIT_CARD
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+(Cust_First_Name,Cust_Last_Name,Cust_Username, CC_Num, Exp_Date,CCV_NUM) 
+\b \expnd0\expndtw0\kerning0
+VALUES
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+ (\'91dbFname\'92, \'91dbLname\'92, \'91dbuser\'92 ,\'91dbcc_Num\'92, \'91expDate\'92, \'91dbCCV\'92);
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Task6: Delete Credit Card
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Assume $dbuser, $0000000000000000 (CC num)
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#step 1: check condition if the card can be deleted
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ * 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+FROM 
+\b0 \expnd0\expndtw0\kerning0
+RESERVATION 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Cust_Username=\'92dbuser\'92 AND DATEDIFF(Check_Out_Date,CURDATE())>0 AND CC_num = \'911000000000000000\'92;
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+# step 2: Delete card 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+DELETE 
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+FROM 
+\b0 \expnd0\expndtw0\kerning0
+CREDIT_CARD 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Cust_Username=\'92User1\'92 AND CC_num = \'911000000000000000\'92 ;
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+#Task7: Reserving a room.
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Assume $dblocation $dbstartDate $dbendDate
+\b \expnd0\expndtw0\kerning0
+, 
+\b0 \expnd0\expndtw0\kerning0
+credit card $dbcc_Num, and
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#dbtotalCost, which will be calculated (nested query)
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Assume \'91dbExtraBed\'92 as 1 or 0; whether the customer wants an extra bed or not.
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+INSERT INTO 
+\b0 \expnd0\expndtw0\kerning0
+RESERVATION
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+(Rsv_ID, Check_In_Date, Check_Out_Date, Total_Cost, Cust_Username, CC_Num)
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+VALUES 
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+('dbRsv_ID', 'dbstartDate', 'dbendDate', 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+(
+\b \expnd0\expndtw0\kerning0
+SELECT 
+\b0 \expnd0\expndtw0\kerning0
+DATEDIFF('dbendDate, 'dbstartDate') * (
+\b \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Fixed_Cost 
+\b \expnd0\expndtw0\kerning0
+FROM 
+\b0 \expnd0\expndtw0\kerning0
+ROOM 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+WHERE 
+\b0 \expnd0\expndtw0\kerning0
+Room_Num = 'dbRoom_Num') + (
+\b \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Cost_Extra_Bed 
+\b \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ ROOM 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Room_Num = 'dbRoom_Num') * '1'), 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+'dbuser', 'dbcc_Num');
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+INSERT INTO
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES (Room_Num, Location, Rsv_ID, Extra_Bed)
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+VALUES
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+('dbRoom_num', 'dblocation','dbrsv_id', 'dbExtraBed');
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+# Task8: Confirmation Screen
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Rsv_ID
+\b \expnd0\expndtw0\kerning0
+ FROM
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION WHERE Cust_Username = "dbuser";
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+# Assumption: User can\'92t make a reservation on the start date.
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+# Task9: Update Reservation
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ * 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ ROOM 
+\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Location = 'dblocation' AND RSV_ID = 'dbrsv_id'
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+ AND
+\b0 \expnd0\expndtw0\kerning0
+ (Room_Num, Location) 
+\b \expnd0\expndtw0\kerning0
+NOT IN
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+	(
+\b \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ (Room_Num, Location)
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ (RESERVES 
+\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION) 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+	
+\b \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+(Cancel_Flag = 0 
+\b \expnd0\expndtw0\kerning0
+AND
+\b0 \expnd0\expndtw0\kerning0
+ RSV_ID = 'dbrsv_id' 
+\b \expnd0\expndtw0\kerning0
+AND
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+((Check_In_DATE <\'92dbendDate\'92) 
+\b \expnd0\expndtw0\kerning0
+AND
+\b0 \expnd0\expndtw0\kerning0
+  (Check_Out_DATE >\'92dbstartDate\'92));
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+#this will update the reservation into the database
+\f1\b0\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\b\fs24 \expnd0\expndtw0\kerning0
+UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION 
+\b \expnd0\expndtw0\kerning0
+SET  
+\b0 \expnd0\expndtw0\kerning0
+Check_In_Date =  'dbstartDate' , Check_Out_Date = 'dbendDate' , Total_Cost=  'dbtotalCost'  
+\b \expnd0\expndtw0\kerning0
+WHERE 
+\b0 \expnd0\expndtw0\kerning0
+RSV_ID = 'dbrsv_id'
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+#Task9: Cancel Reservation
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+UPDATE
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION 
+\b \expnd0\expndtw0\kerning0
+SET
+\b0 \expnd0\expndtw0\kerning0
+ Cancel_Flag = 1, Total_Cost=  'dbnewtotalCost' 
+\b \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Rsv_ID = "dbrsv_ID"
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+ 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+
+\f0\fs24 \expnd0\expndtw0\kerning0
+#Task10: View Review
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b\fs24 \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Rating, Comment 
+\b \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ REVIEW 
+\b \expnd0\expndtw0\kerning0
+WHERE
+\b0 \expnd0\expndtw0\kerning0
+ Location = 'dblocation' ORDER BY Rating; 
+\f1\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+#Task11: Write Review
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0 \expnd0\expndtw0\kerning0
+#Assume $dbreviewnum, $dbrating, $dbcomment
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+SELECT DISTINCT
+\b0 \expnd0\expndtw0\kerning0
+ Location 
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+FROM 
+\b0 \expnd0\expndtw0\kerning0
+RESERVATION
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+NATURAL JOIN 
+\b0 \expnd0\expndtw0\kerning0
+ROOM
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+NATURAL JOIN 
+\b0 \expnd0\expndtw0\kerning0
+RESERVES
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+WHERE 
+\b0 \expnd0\expndtw0\kerning0
+Cust_Username = 'dbuser'
+\f1 \expnd0\expndtw0\kerning0
+\
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+INSERT INTO 
+\b0 \expnd0\expndtw0\kerning0
+REVIEW
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+(Location, Rating, Comment, Cust_Username)
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+VALUES
+\f1\b0 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+(dblocation, dbrating, dbcomment, dbuser);
+\f1 \expnd0\expndtw0\kerning0
+\
+\
+\
+\page \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\i \cf0 \expnd0\expndtw0\kerning0
+#Manager Tasks
+\f1\i0 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+#Task13: View Reservation Report
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Month(Check_In_Date) 
+\b \expnd0\expndtw0\kerning0
+AS
+\b0 \expnd0\expndtw0\kerning0
+ "Month", Location ,COUNT(*) 
+\b \expnd0\expndtw0\kerning0
+AS
+\b0 \expnd0\expndtw0\kerning0
+ "Total Number Of Reservations" 
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION 
+\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES
+\b \expnd0\expndtw0\kerning0
+ GROUP BY 
+\b0 \expnd0\expndtw0\kerning0
+Month(Check_In_Date), Location 
+\b \expnd0\expndtw0\kerning0
+ORDER BY
+\b0 \expnd0\expndtw0\kerning0
+ Month(Check_In_Date), Location;
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\fs24 \cf0 \expnd0\expndtw0\kerning0
+ 
+\fs20 \expnd0\expndtw0\kerning0
+    
+\fs22 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+#
+\b0 \expnd0\expndtw0\kerning0
+Task14: View popular room-category report
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+#get only August and September
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ month( Check_In_Date ) AS  "Month", Room_Category, Rsv_ID, Location,count(*) as "Total"
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ ROOM
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES where Month(`Check_In_Date`)=8
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+GROUP BY
+\b0 \expnd0\expndtw0\kerning0
+ Room_Category, location
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+ORDER BY 
+\b0 \expnd0\expndtw0\kerning0
+Total 
+\b \expnd0\expndtw0\kerning0
+DESC
+\f1\b0 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+LIMIT
+\b0 \expnd0\expndtw0\kerning0
+ 5
+\f1 \expnd0\expndtw0\kerning0
+\
+\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+#Task15: View Revenue Report
+\f1 \expnd0\expndtw0\kerning0
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Month(Check_In_Date), Location, Sum(Total_Cost) 
+\b \expnd0\expndtw0\kerning0
+AS
+\b0 \expnd0\expndtw0\kerning0
+ "Total Revenue of Reservations"
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+FROM
+\b0 \expnd0\expndtw0\kerning0
+ RESERVATION 
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES 
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ ROOM
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+GROUP BY
+\b0 \expnd0\expndtw0\kerning0
+ Month(Check_In_Date), Location;
+\f1 \expnd0\expndtw0\kerning0
+\
+\
+\
+\page \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+#Created a view for all relevant Reservation/Reserves/Room information
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+CREATE
+\b0 \expnd0\expndtw0\kerning0
+ VIEW All_Reservation_Data 
+\b \expnd0\expndtw0\kerning0
+AS
+\b0 \expnd0\expndtw0\kerning0
+ 
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+SELECT
+\b0 \expnd0\expndtw0\kerning0
+ Rsv_ID, Room_Num, Location, Check_In_Date 
+\b \expnd0\expndtw0\kerning0
+,
+\b0 \expnd0\expndtw0\kerning0
+ Check_Out_Date, Fixed_Cost, Total_Cost , Room_Category, Cost_Extra_Bed, Extra_Bed 
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+FROM
+\f1\b0 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0 \cf0 \expnd0\expndtw0\kerning0
+RESERVATION
+\f1 \expnd0\expndtw0\kerning0
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\sl276\slmult1
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ ROOM
+\f1 \expnd0\expndtw0\kerning0
+\
+
+\f0\b \expnd0\expndtw0\kerning0
+NATURAL JOIN
+\b0 \expnd0\expndtw0\kerning0
+ RESERVES
+\f1 \expnd0\expndtw0\kerning0
+\
+}
